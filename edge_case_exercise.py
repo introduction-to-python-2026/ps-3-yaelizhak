@@ -1,3 +1,23 @@
+def estimate_pi (num_of_points):
+  inside_circle = 0
+  outside_circle = 0
+  num_of_points = 1001
+  for i in range(num_of_points):
+    import random
+    x = random.random ()
+    import random
+    y = random.random ()
+    r = 0.5
+    distance_to_center = ((y-r)**2+(x-r)**2)**0.5 #r=0.5
+    if distance_to_center<=r: 
+      inside_circle +=1
+    if distance_to_center>r:
+      outside_circle +=1
+
+  pi = 4*inside_circle/num_of_points
+  return pi
+
+
 def move(my_list, direction=None):
     index_of_one = my_list.index(1)
     new_list = my_list.copy()
@@ -15,10 +35,4 @@ def move(my_list, direction=None):
     
     return new_list
 
-def approximate_pi(n_terms):
-  libneiz_list = []
-  for n in range(1,11,):
-    libneiz_list.append((-1)**n/(2*n+1))
-    y = sum(libneiz_list)
-    x = y*4
-    return(x)
+
