@@ -18,11 +18,7 @@ def move(my_list, direction=None):
 
 def approximate_pi(n_terms):
     total = 0
-    liebniz_list= []
     for n in range(n_terms):
         term = (-1)**n / (2*n + 1)
         total += term
-        liebniz_list.append(term)
-    y= sum(liebniz_list)
-    x= y*4
-    return x
+    return 4 * total
