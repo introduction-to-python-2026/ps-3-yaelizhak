@@ -2,9 +2,9 @@ def move(my_list, direction=None):
     index_of_one = my_list.index(1)
     new_list = my_list.copy()
     if index_of_one == (len(my_list)-1) and direction == "right":
-       return new_list
+        return new_list
     elif index_of_one == 0 and direction == "left":
-       return new_list
+        return new_list
 
     if direction == 'right':
         new_list[index_of_one] = 0
@@ -15,10 +15,9 @@ def move(my_list, direction=None):
     
     return new_list
 
-
 def approximate_pi(n_terms):
-    total = 0
+    total = 0.0  # explicit float
     for n in range(n_terms):
-        term = (-1)**n / (2*n + 1)
+        term = (-1.0)**n / (2*n + 1)  # ensure float division
         total += term
-    return 4 * total
+    return 4.0 * total
