@@ -14,3 +14,15 @@ def move(my_list, direction=None):
         new_list[index_of_one - 1] = 1
     
     return new_list
+
+
+def approximate_pi(n_terms):
+    total = 0
+    liebniz_list= []
+    for n in range(n_terms):
+        term = (-1)**n / (2*n + 1)
+        total += term
+        liebniz_list.append(term)
+    y= sum(liebniz_list)
+    x= y*4
+    return x
